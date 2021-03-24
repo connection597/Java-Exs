@@ -1,0 +1,14 @@
+package ex0;
+import java.util.Arrays;
+import java.util.stream.Stream;
+import java.util.List;
+import java.util.ArrayList;
+
+class Ex2 {
+	public int[] solution(int[]arr) {
+		if(arr.length <=1) return new int[] {-1};
+		int min =Arrays.stream(arr).min().getAsInt();
+		return Arrays.stream(arr).filter(i ->i != min).toArray();
+	}
+   
+}
